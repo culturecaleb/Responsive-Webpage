@@ -1,0 +1,396 @@
+* {
+	box-sizing: border-box;
+}
+
+
+body {    
+    margin: 0;
+}
+
+
+/*Font Layout*/
+* {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+
+
+h1 {
+	font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 30px;
+}
+ 
+h2 {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-weight:600;
+	color: #696969;
+}
+
+p {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 25px;
+	color: #808080;
+}
+
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited { 
+	text-decoration: none; 
+	color: #262626; 
+}
+a:hover { 
+	text-decoration: none; 
+	color: #00FF7F; 
+}
+a:hover, 
+a:active { 
+	text-decoration: none; 
+	color: #D8BFD8;
+} 
+
+
+/*Layout structure*/
+
+.wrap {
+	width: 100%;
+}
+
+.container {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.nav-bar {
+	margin-bottom: 30px;
+	background-color: #f9f9f9;
+
+
+}
+
+.heading {
+	margin-bottom: 40px;
+}
+
+
+/*Page Elements*/
+
+.name {
+	text-align: center;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 3em;
+}
+
+.nav-btns {
+	padding-left: 0;
+	display: inline;
+	text-align: center;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-btns li { 
+    padding: 20px 0;
+ }
+
+.nav-btns a {
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+} 
+
+.profile-pic {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	border-radius: 7px;
+}
+
+.intro {
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+/*Sections Colums*/
+
+
+.portfolio-heading {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/*marketing*/
+
+.marketing {
+	margin-bottom: 70px;
+}
+
+.portfolio-1 {
+	width: 100%;
+}
+
+
+.marketing h2,
+p {
+	text-align: center;
+}
+
+/*search*/
+
+.portfolio-2 {
+	width: 100%;
+}
+
+.search {
+	margin-bottom: 70px;
+}
+
+.search h2,
+p {
+	text-align: center;
+}
+
+
+/*travel*/
+
+.portfolio-3 {
+	width: 100%;
+}
+
+.travel {
+	margin-bottom: 70px;
+}
+
+.travel h2,
+p {
+	text-align: center;
+}
+
+
+/*map*/
+
+.portfolio-4 {
+	width: 100%;
+}
+
+.map {
+	margin-bottom: 70px;
+}
+
+.map h2,
+p {
+	text-align: center;
+}
+
+
+/*photo*/
+
+.portfolio-5 {
+	width: 100%;
+}
+
+.photo {
+	margin-bottom: 70px;
+}
+
+.photo h2,
+p {
+	text-align: center;
+}
+
+/*calculator*/
+
+.portfolio-6 {
+	width: 100%;
+}
+
+.calculator {
+	margin-bottom: 70px;
+}
+
+.calculator h2,
+p {
+	text-align: center;
+}
+
+
+/*FOOTER*/
+
+.footer {
+	background-color: #f9f9f9;
+}
+
+#message {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.contact h2,
+p {
+	text-align: center;
+}
+
+
+#footer-name {
+	float: left;
+}
+
+#back {
+	float: right;
+}
+
+.footer-bottom {
+	border-top: 1px solid #D3D3D3;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.secondary-nav {
+	display: none;
+}
+
+
+/*CLEAR FIX*/
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/*Media Queries*/
+
+
+/*Tablet Screens*/
+@media (min-width: 768px) {
+		
+		.nav-btns {
+			display: block;
+		}
+
+		.nav-btns li {
+			display: inline-block;
+			margin: 0 auto;
+		}
+
+		.intro {
+			float: left;
+			width: 65%;
+			padding-right: 8px;
+			text-align: left;
+			padding-top: 5em;
+		}
+
+		.profile-pic {
+			float: right;
+			width: 35%;
+			max-height: 320px;
+		}
+		
+		.col {
+			float: left;
+			width: 50%;
+			padding-right: 8px;
+		}
+
+
+		.contact {
+			padding-top: 3em;
+		}
+
+		.email {
+			padding-bottom: 3em;
+		}
+
+		#message {
+			padding-left: 5em;
+			padding-right: 5em;
+		}
+
+		.footer-bottom {
+			margin-left: 3em;
+			margin-right: 3em;
+        }
+
+        #back {
+        	display: none;
+        }
+
+        .secondary-nav {
+        	display: inline-block;
+        	float: right;
+        }
+		
+		.secondary-nav h2 {
+			display: inline-block;
+			padding-right: 1em;
+		}
+
+}
+
+
+          /*Laptops*/
+@media (min-width: 1024px) {
+		
+		.name {
+			float: left;
+			margin-left: 2em;
+		}
+		
+		.nav-btns {
+			float: right;
+			margin-right: 3em;
+		}
+
+		.profile-pic {
+			width: 23%;
+		}
+
+		.intro {
+			width: 77%;
+			text-align: center;
+		}
+		
+		.col {
+			width: 33%;
+			padding-right: 10px;
+		}
+
+		.travel,
+		.calculator {
+			padding-right: 0;
+		}
+
+		#message {
+			padding-left: 8em;
+			padding-right: 8em;
+		}
+
+
+		
+
+
+		/*Clear-fix*/
+
+		.clearfix {
+    		content: "";
+    		clear: both;
+    		display: table;
+		}
+
+}
