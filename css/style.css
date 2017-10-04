@@ -5,6 +5,8 @@
 
 body {    
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -42,6 +44,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: #000;
 }
 
 a:visited { 
@@ -65,11 +68,6 @@ a:active {
 	width: 100%;
 }
 
-.container {
-	width: 95%;
-	margin-right: auto;
-	margin-left: auto;
-}
 
 .nav-bar {
 	margin-bottom: 30px;
@@ -81,6 +79,39 @@ a:active {
 .heading {
 	margin-bottom: 40px;
 }
+
+/*Flexbox*/
+
+.nav-bar {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.portfolio {
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio-heading,
+.col {
+	align-self: center;
+}
+
+
+
+
+
 
 
 /*Page Elements*/
@@ -94,28 +125,27 @@ a:active {
 }
 
 .nav-btns {
+	display: flex;
+	flex-direction: column;
 	padding-left: 0;
-	display: inline;
-	text-align: center;
-    margin-left: auto;
-	margin-right: auto;
 }
 
 .nav-btns li { 
     padding: 20px 0;
+    align-self: center;
  }
+
 
 .nav-btns a {
 	text-align: center;
-	width: 100%;
 	padding: 20px;
 } 
 
 .profile-pic {
-	width: 80%;
-	display: block;
-	margin: 0 auto;
+	max-width: 400px;
+	max-height: 355px;
 	border-radius: 7px;
+	align-self: center;
 }
 
 .intro {
@@ -130,6 +160,7 @@ a:active {
 .portfolio-heading {
 	text-align: center;
 	padding-bottom: 20px;
+
 }
 
 /*marketing*/
@@ -243,32 +274,26 @@ p {
 	text-align: center;
 }
 
-
-#footer-name {
-	float: left;
+.footer {
+    display: flex;
+	flex-direction: column;
 }
 
-#back {
-	float: right;
+.footer-name,
+.back {
+	align-self: center;
 }
 
 .footer-bottom {
 	border-top: 1px solid #D3D3D3;
 	margin-left: 3em;
 	margin-right: 3em;
+	display: flex;
+	flex-direction: column;
 }
 
 .secondary-nav {
 	display: none;
-}
-
-
-/*CLEAR FIX*/
-
-.clearfix {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 
@@ -279,33 +304,56 @@ p {
 /*Tablet Screens*/
 @media (min-width: 768px) {
 		
-		.nav-btns {
-			display: block;
+		.container {
+			margin: 0 15px;
+		}
+		
+		.nav-bar {
+			align-content: center;
 		}
 
-		.nav-btns li {
-			display: inline-block;
-			margin: 0 auto;
+		.nav-btns  {
+			text-align: center;
+		}
+
+		.heading {
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.intro {
-			float: left;
-			width: 65%;
-			padding-right: 8px;
-			text-align: left;
-			padding-top: 5em;
+			flex: 2;
+			order: -1;
+			padding-right: 1em;
 		}
 
 		.profile-pic {
-			float: right;
-			width: 35%;
-			max-height: 320px;
+			flex: 1;
+			max-width: 300px;
+			height: 250px;
 		}
 		
+		.portfolio-cols {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+
 		.col {
-			float: left;
-			width: 50%;
-			padding-right: 8px;
+			flex: 1 50%;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+
+
+
+
+		.search {
+			margin-top: 1em;
 		}
 
 
@@ -323,11 +371,11 @@ p {
 		}
 
 		.footer-bottom {
-			margin-left: 3em;
-			margin-right: 3em;
+			flex-direction: row;
+			justify-content: space-between;
         }
 
-        #back {
+        .back {
         	display: none;
         }
 
@@ -347,28 +395,28 @@ p {
           /*Laptops*/
 @media (min-width: 1024px) {
 		
+		.nav-bar {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
 		.name {
-			float: left;
 			margin-left: 2em;
 		}
 		
 		.nav-btns {
-			float: right;
+			flex-direction: row;
 			margin-right: 3em;
 		}
 
 		.profile-pic {
-			width: 23%;
+			height: 300px;
 		}
 
-		.intro {
-			width: 77%;
-			text-align: center;
-		}
+
 		
 		.col {
-			width: 33%;
-			padding-right: 10px;
+			flex: 1 33%;
 		}
 
 		.travel,
@@ -379,18 +427,6 @@ p {
 		#message {
 			padding-left: 8em;
 			padding-right: 8em;
-		}
-
-
-		
-
-
-		/*Clear-fix*/
-
-		.clearfix {
-    		content: "";
-    		clear: both;
-    		display: table;
 		}
 
 }
